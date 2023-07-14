@@ -1,0 +1,25 @@
+<div class="centre flex-container">
+    <div class="box p15 white flex-vertical">
+        <form  #login="ngForm" (ngSubmit)="submit(login)">
+            <div class="form-group">
+                <div class="text_field">
+                    <input #email="ngModel" required type="email" name="email" class="form-control" value="email" [(ngModel)]="UserObject.email">  
+                    <span></span>
+                    <label>Email</label>
+                </div>
+
+                <div class="text_field">
+                     <input #password="ngModel"required minlength="8" type="password" name="password" class="form-control" value="password" [(ngModel)]="UserObject.password" >  
+                     <span></span>
+                     <label>password</label>    
+                    </div>
+
+                <input type="submit" (click)="onLogIn()" value="login">
+            </div>
+            <a routerLink="/registration">Create your account</a>
+            
+
+        </form>
+    </div>
+    
+</div>
